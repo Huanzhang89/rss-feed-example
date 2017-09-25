@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
-import feeds from './feeds';
-const rootReducers = combineReducers({
-  feeds,
+import rssFeeds from './feeds';
+const rootReducer = combineReducers({
+  rssFeeds,
 })
 
-export default rootReducers;
+export default rootReducer;
