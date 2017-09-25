@@ -86,7 +86,7 @@ class SideNav extends Component {
   }
 
   renderFeeds(feeds) {
-    return feeds && feeds.reverse().map((feedData, index) => {
+    return feeds && feeds.map((feedData, index) => {
       return <Feed key={index} active={index === this.state.active ? true : false} onClick={()=>this.setState({active: index})}>
         <Link to={{hash: '#' + index}} onClick={() => this.props.getSelectedFeed(feedData)}>
           {feedData.feed.url}
