@@ -1,6 +1,9 @@
 const feedsReducer = (state = {rssFeed:[]}, action) => {
   switch(action.type) {
     case 'ADD_FEED':
+      if (!action.feedData.feed) {
+        return state;
+      }
       return {
         rssFeed: [action.feedData, ...state.rssFeed],
         currentFeed: action.feedData,
